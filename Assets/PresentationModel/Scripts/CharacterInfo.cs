@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 
-namespace Lessons.Architecture.PM
+namespace PresentationModel.Scripts
 {
     public sealed class CharacterInfo
     {
