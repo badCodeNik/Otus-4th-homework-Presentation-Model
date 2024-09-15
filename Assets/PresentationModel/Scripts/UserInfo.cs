@@ -4,20 +4,18 @@ using UnityEngine;
 
 namespace PresentationModel.Scripts
 {
-    public sealed class UserInfo
+    [Serializable]
+    public class UserInfo
     {
         public event Action<string> OnNameChanged;
         public event Action<string> OnDescriptionChanged;
-        public event Action<Sprite> OnIconChanged; 
+        public event Action<Sprite> OnIconChanged;
 
-        [ShowInInspector, ReadOnly]
-        public string Name { get; private set; }
+        [ShowInInspector, ReadOnly] public string Name { get; private set; }
 
-        [ShowInInspector, ReadOnly]
-        public string Description { get; private set; }
+        [ShowInInspector, ReadOnly] public string Description { get; private set; }
 
-        [ShowInInspector, ReadOnly]
-        public Sprite Icon { get; private set; }
+        [ShowInInspector, ReadOnly] public Sprite Icon { get; private set; }
 
         [Button]
         public void ChangeName(string name)

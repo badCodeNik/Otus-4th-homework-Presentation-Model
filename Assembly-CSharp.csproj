@@ -43,22 +43,49 @@
   <ItemGroup>
      <Compile Include="Assets\PresentationModel\Scripts\CharacterInfo.cs" />
      <Compile Include="Assets\PresentationModel\Scripts\CharacterStat.cs" />
+     <Compile Include="Assets\PresentationModel\Scripts\PopupPresenter.cs" />
      <Compile Include="Assets\PresentationModel\Scripts\UserInfo.cs" />
+     <Compile Include="Assets\PresentationModel\Scripts\PopupView.cs" />
      <Compile Include="Assets\PresentationModel\Scripts\PlayerLevel.cs" />
+     <Compile Include="Assets\PresentationModel\Scripts\UserConfig.cs" />
+     <Compile Include="Assets\PresentationModel\Scripts\GameManager.cs" />
+     <Compile Include="Assets\PresentationModel\Scripts\StatFactory.cs" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Packages\System.Threading.Channels.8.0.0\lib\netstandard2.1\System.Threading.Channels.xml" />
      <None Include="Assets\Packages\Microsoft.Bcl.TimeProvider.8.0.0\useSharedDesignerContext.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\useSharedDesignerContext.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Packages\Microsoft.Bcl.TimeProvider.8.0.0\lib\netstandard2.0\Microsoft.Bcl.TimeProvider.xml" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Packages\System.ComponentModel.Annotations.5.0.0\lib\netstandard2.1\System.ComponentModel.Annotations.xml" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Packages\System.Threading.Channels.8.0.0\useSharedDesignerContext.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Packages\ObservableCollections.2.2.1\lib\netstandard2.1\ObservableCollections.xml" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Packages\R3.1.2.8\lib\netstandard2.1\R3.xml" />
      <None Include="Assets\Packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\useSharedDesignerContext.txt" />
      <None Include="Assets\Packages\System.ComponentModel.Annotations.5.0.0\version.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Packages\ObservableCollections.R3.2.2.1\lib\netstandard2.1\ObservableCollections.R3.xml" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.xml" />
      <None Include="Assets\Packages\System.ComponentModel.Annotations.5.0.0\useSharedDesignerContext.txt" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Job\Unity\Unity Hub\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -302,6 +329,42 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\Job\Unity\Unity Hub\2021.3.7f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+     </Reference>
+     <Reference Include="R3">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\R3.1.2.8\lib\netstandard2.1\R3.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.OdinInspector.Attributes">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Pdb">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.Serialization.Config">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
+     </Reference>
+     <Reference Include="ObservableCollections.R3">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\ObservableCollections.R3.2.2.1\lib\netstandard2.1\ObservableCollections.R3.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.CompilerServices.Unsafe">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.Annotations">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\System.ComponentModel.Annotations.5.0.0\lib\netstandard2.1\System.ComponentModel.Annotations.dll</HintPath>
+     </Reference>
+     <Reference Include="Sirenix.Utilities.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Microsoft.Bcl.TimeProvider">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\Microsoft.Bcl.TimeProvider.8.0.0\lib\netstandard2.0\Microsoft.Bcl.TimeProvider.dll</HintPath>
+     </Reference>
+     <Reference Include="ObservableCollections">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\ObservableCollections.2.2.1\lib\netstandard2.1\ObservableCollections.dll</HintPath>
+     </Reference>
      <Reference Include="Sirenix.OdinInspector.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.dll</HintPath>
      </Reference>
@@ -311,17 +374,11 @@
      <Reference Include="Unity.Burst.Cecil.Mdb">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
-     <Reference Include="Sirenix.OdinInspector.Attributes">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Burst.Cecil">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
-     <Reference Include="Sirenix.Serialization.Config">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.dll</HintPath>
+     <Reference Include="Unity.Burst.Cecil.Rocks">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="Sirenix.Utilities">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.dll</HintPath>
@@ -329,41 +386,11 @@
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
-     </Reference>
-     <Reference Include="Newtonsoft.Json">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-     </Reference>
      <Reference Include="Sirenix.Serialization">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Sirenix.Utilities.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Microsoft.Bcl.AsyncInterfaces">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\netstandard2.1\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-     </Reference>
-     <Reference Include="R3">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\R3.1.2.8\lib\netstandard2.1\R3.dll</HintPath>
-     </Reference>
-     <Reference Include="System.Runtime.CompilerServices.Unsafe">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
-     </Reference>
-     <Reference Include="System.ComponentModel.Annotations">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\System.ComponentModel.Annotations.5.0.0\lib\netstandard2.1\System.ComponentModel.Annotations.dll</HintPath>
-     </Reference>
-     <Reference Include="Microsoft.Bcl.TimeProvider">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\Microsoft.Bcl.TimeProvider.8.0.0\lib\netstandard2.0\Microsoft.Bcl.TimeProvider.dll</HintPath>
-     </Reference>
      <Reference Include="System.Threading.Channels">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\System.Threading.Channels.8.0.0\lib\netstandard2.1\System.Threading.Channels.dll</HintPath>
-     </Reference>
-     <Reference Include="ObservableCollections.R3">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\ObservableCollections.R3.2.2.1\lib\netstandard2.1\ObservableCollections.R3.dll</HintPath>
-     </Reference>
-     <Reference Include="ObservableCollections">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Assets\Packages\ObservableCollections.2.2.1\lib\netstandard2.1\ObservableCollections.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Job\Unity\Unity Hub\2021.3.7f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -731,15 +758,6 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Job\Unity\Unity Hub\2021.3.7f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
@@ -749,38 +767,17 @@
      <Reference Include="Unity.2D.PixelPerfect">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="PsdPlugin">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Timeline">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.2D.IK.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Path.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
@@ -788,23 +785,71 @@
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.IK.Runtime">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Common.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Animation.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="NuGetForUnity">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\NuGetForUnity.dll</HintPath>
+     </Reference>
+     <Reference Include="R3.Unity">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\R3.Unity.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.Psdimporter.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
@@ -817,9 +862,6 @@
      </Reference>
      <Reference Include="Unity.Mathematics">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
@@ -842,20 +884,11 @@
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Editor">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
@@ -863,25 +896,19 @@
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
-     <Reference Include="NuGetForUnity">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\NuGetForUnity.dll</HintPath>
-     </Reference>
-     <Reference Include="R3.Unity">
-     <HintPath>C:\Job\Fork\OtusHomework\4th homework\4th homework\Library\ScriptAssemblies\R3.Unity.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
-      <Project>{1f1df500-160f-8b75-39e9-b95da4779754}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
+      <Project>{8d19e2c7-a329-1944-30b0-e31f6dae5dcf}</Project>
+      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
       <Project>{281ae2c0-f7a9-8360-6a38-e2be50f09d87}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
-      <Project>{8d19e2c7-a329-1944-30b0-e31f6dae5dcf}</Project>
-      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
+    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
+      <Project>{1f1df500-160f-8b75-39e9-b95da4779754}</Project>
+      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

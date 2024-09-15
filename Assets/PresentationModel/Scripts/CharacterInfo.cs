@@ -5,27 +5,28 @@ using Sirenix.OdinInspector;
 
 namespace PresentationModel.Scripts
 {
-    public sealed class CharacterInfo
+    [Serializable]
+    public class CharacterInfo
     {
         public event Action<CharacterStat> OnStatAdded;
         public event Action<CharacterStat> OnStatRemoved;
-    
-        [ShowInInspector]
-        private readonly HashSet<CharacterStat> stats = new();
+
+        [ShowInInspector] private readonly HashSet<CharacterStat> _stats = new();
 
         [Button]
-        public void AddStat(CharacterStat stat)
+        public void AddStat(string name)
         {
-            if (this.stats.Add(stat))
+            var stat = new CharacterStat(name);
+            if (_stats.Add(stat))
             {
-                this.OnStatAdded?.Invoke(stat);
+                OnStatAdded?.Invoke(stat);
             }
         }
 
         [Button]
         public void RemoveStat(CharacterStat stat)
         {
-            if (this.stats.Remove(stat))
+            if (_stats.Remove(stat))
             {
                 this.OnStatRemoved?.Invoke(stat);
             }
@@ -33,7 +34,7 @@ namespace PresentationModel.Scripts
 
         public CharacterStat GetStat(string name)
         {
-            foreach (var stat in this.stats)
+            foreach (var stat in this._stats)
             {
                 if (stat.Name == name)
                 {
@@ -46,7 +47,7 @@ namespace PresentationModel.Scripts
 
         public CharacterStat[] GetStats()
         {
-            return this.stats.ToArray();
+            return this._stats.ToArray();
         }
     }
 }

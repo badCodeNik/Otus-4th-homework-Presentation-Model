@@ -1,23 +1,29 @@
 using System;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace PresentationModel.Scripts
 {
-    public sealed class CharacterStat
+    [Serializable]
+    public class CharacterStat
     {
-        public event Action<int> OnValueChanged; 
+        public event Action<int> OnValueChanged;
+        [SerializeField, ReadOnly] private string name;
+        [SerializeField, ReadOnly] private int value;
 
-        [ShowInInspector, ReadOnly]
-        public string Name { get; private set; }
-
-        [ShowInInspector, ReadOnly]
-        public int Value { get; private set; }
+        public string Name => name;
+        public int Value => value;
 
         [Button]
         public void ChangeValue(int value)
         {
-            this.Value = value;
-            this.OnValueChanged?.Invoke(value);
+            this.value = value;
+            OnValueChanged?.Invoke(value);
+        }
+        
+        public CharacterStat(string name)
+        {
+            this.name = name;
         }
     }
 }

@@ -3,29 +3,26 @@ using Sirenix.OdinInspector;
 
 namespace PresentationModel.Scripts
 {
-    public sealed class PlayerLevel
+    [Serializable]
+    public class PlayerLevel
     {
-        public event Action OnLevelUp;
+        public event Action<int> OnLevelUp;
         public event Action<int> OnExperienceChanged;
 
-        [ShowInInspector, ReadOnly]
-        public int CurrentLevel { get; private set; } = 1;
+        [ShowInInspector, ReadOnly] public int CurrentLevel { get; private set; } = 1;
+
+        [ShowInInspector, ReadOnly] public int CurrentExperience { get; private set; }
 
         [ShowInInspector, ReadOnly]
-        public int CurrentExperience { get; private set; }
-
-        [ShowInInspector, ReadOnly]
-        public int RequiredExperience
-        {
-            get { return 100 * (this.CurrentLevel + 1); }
-        }
+        public int RequiredExperience =>
+            100 * (CurrentLevel + 1);
 
         [Button]
         public void AddExperience(int range)
         {
-            var xp = Math.Min(this.CurrentExperience + range, this.RequiredExperience);
-            this.CurrentExperience = xp;
-            this.OnExperienceChanged?.Invoke(xp);
+            var xp = Math.Min(CurrentExperience + range, RequiredExperience);
+            CurrentExperience = xp;
+            OnExperienceChanged?.Invoke(xp);
         }
 
         [Button]
@@ -35,8 +32,16 @@ namespace PresentationModel.Scripts
             {
                 this.CurrentExperience = 0;
                 this.CurrentLevel++;
-                this.OnLevelUp?.Invoke();
+                this.OnLevelUp?.Invoke(CurrentLevel);
             }
+        }
+
+        [Button]
+        public void ResetLevel()
+        {
+            CurrentExperience = 0;
+            CurrentLevel = 0;
+            OnLevelUp?.Invoke(CurrentLevel);
         }
 
         public bool CanLevelUp()
